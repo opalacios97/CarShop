@@ -8,7 +8,7 @@ Este proyecto es un formulario de datos pensado para el proceso de recepción de
 
 Para poder hacer uso de este proyecto requieres instalarlo, puedes hacerlo desde el símbolo del sistema o utilizando Git Bash. Una vez ubicado en el directorio donde deseas clonar el proyecto, debes ejecutar los comandos de instalación.
 
-### `Instalación`
+### Instalación
 
 En primer lugar debes clonar el proyecto, lo lograrás ejecutando el siguiente comando:
 
@@ -25,7 +25,7 @@ Finalmente, para instalar las dependencias del proyecto debes ejecutar:
 Una vez instaladas las dependencias, ya podrás empezar a trabajar con este proyecto de manera local.\
 
 
-### `Uso`
+### Uso
 
 En el directorio del proyecto es posible ejecutar los siguentes comandos:
 
