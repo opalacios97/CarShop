@@ -21,6 +21,15 @@ function App() {
   const [datos, setDatos] = useState({});
   const [datos1, setDatos1] = useState({});
   const [datos2, setDatos2] = useState({});
+  const [temaActual, setTema] = useState("Claro")
+
+  function handleTema(){
+    if (temaActual==="Claro"){
+      setTema("Oscuro")
+    }else{
+      setTema("Claro")
+    }
+  }
 
   function handleRetroceder(){
     setContador(contador-1);
@@ -87,38 +96,44 @@ function App() {
 
   if(contador === 0){
     return(
-      <div className='pantalla'>
-        <IniciarRegistro />
-        <div className='navegacion'>
+      <div className= {"pantalla " + "pant"+temaActual} >
+        <div className='temaBoton'>
+          <button onClick={handleTema}>Cambiar tema</button>
+        </div>
+        <IniciarRegistro tema={temaActual} />
+        <div className={"navegacion " + "nav"+temaActual}>
           <button onClick={handleStart}>Iniciar</button>
         </div>
       </div>
     )
   }else if(contador === 1){
     return(
-      <div className='pantalla'>
-        <FormularioDatosCliente onClickDatos={handleSendInfoCliente} onClickVolver={handleRetroceder}/>  
+      <div className={"pantalla " + "pant"+temaActual}>
+        <FormularioDatosCliente onClickDatos={handleSendInfoCliente} onClickVolver={handleRetroceder} onClickTema={handleTema} tema={temaActual}/>  
       </div>
     )
   }else if(contador === 2){
     return(
-      <div className='pantalla'>
-        <FormularioDatosVehiculo onClickDatos={handleSendInfoVehiculo} onClickVolver={handleRetroceder} />
+      <div className={"pantalla " + "pant"+temaActual}>
+        <FormularioDatosVehiculo onClickDatos={handleSendInfoVehiculo} onClickVolver={handleRetroceder} onClickTema={handleTema} tema={temaActual}/>
       </div>
     )
   }else if(contador === 3){
 
     return(
-      <div className='pantalla'>
-        <FormularioServicios onClickDatos={handleSendInfoServicios} onClickVolver={handleRetroceder} />
+      <div className={"pantalla " + "pant"+temaActual}>
+        <FormularioServicios onClickDatos={handleSendInfoServicios} onClickVolver={handleRetroceder} onClickTema={handleTema} tema={temaActual}/>
       </div>
     )
   }else if(contador === 4){
 
     return(
-      <div className='pantalla'>
-        <GenerarOrden />
-        <div className='navegacion'>
+      <div className={"pantalla " + "pant"+temaActual}>
+        <div className='temaBoton'>
+          <button onClick={handleTema}>Cambiar tema</button>
+        </div>
+        <GenerarOrden tema={temaActual}/>
+        <div className={"navegacion " + "nav"+temaActual}>
           <button onClick={handleRetroceder}>Volver</button>
           <button onClick={handleSendInfoAll}>Ver orden de trabajo</button> 
         </div>
@@ -127,10 +142,13 @@ function App() {
 
   }else{
     return(
-      <div className='pantalla'>
-        <OrdenTrabajo state={state} idActual={nextId}/>
+      <div className={"pantalla " + "pant"+temaActual}>
+        <div className='temaBoton'>
+          <button onClick={handleTema}>Cambiar tema</button>
+        </div>
+        <OrdenTrabajo state={state} idActual={nextId} tema={temaActual}/>
         <p></p>
-        <div className='navegacion'>
+        <div className={"navegacion " + "nav"+temaActual}>
           <button onClick={handleRetroceder}>Volver</button>
           <button onClick={handleNew}>Confirmar</button>         
         </div>

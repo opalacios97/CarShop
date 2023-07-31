@@ -1,9 +1,9 @@
 import React from "react";
 
-function EncabezadoFormulario({titulo1,titulo2}){
+function EncabezadoFormulario({titulo1,titulo2,tema}){
     return(
       <div>
-        <div className='encabezado'>
+        <div className={"encabezado "+"en"+tema}>
           <h1>CarWash - {titulo1}</h1>
         </div>
         <h2>{titulo2}</h2>

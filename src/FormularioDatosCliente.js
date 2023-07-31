@@ -7,7 +7,7 @@ import CampoText from "./CampoText";
 const listaCampos = ["nombre","email","teléfono","identificación"];
 const listaOpciones = ["Cédula","Ruc","Pasaporte"];
 
-function FormularioDatosCliente({onClickDatos,onClickVolver}){
+function FormularioDatosCliente({onClickDatos,onClickVolver,onClickTema,tema}){
     const [tipoID,setTipoID] = useState(null);
     const [text,setText] = useState("");
     const [text1,setText1] = useState("");
@@ -20,8 +20,11 @@ function FormularioDatosCliente({onClickDatos,onClickVolver}){
 
 
     return(
-      <div className='formulario'>
-        <EncabezadoFormulario titulo1={'Recepción del Vehículo'} titulo2={'Datos del cliente'} />
+      <div className={"formulario " + "form"+tema}>
+        <div className='temaBoton'>
+          <button onClick={onClickTema}>Cambiar tema</button>
+        </div>
+        <EncabezadoFormulario titulo1={'Recepción del Vehículo'} titulo2={'Datos del cliente'} tema={tema}/>
         <></>
         
         <CampoText etiquetaCampo={listaCampos[0]} formClass={"form"} text={text} setText={setText} key={listaCampos[0]}/>
@@ -39,7 +42,7 @@ function FormularioDatosCliente({onClickDatos,onClickVolver}){
             Tipo de identificación seleccionada: <strong className={"form"} value={tipoID} >{tipoID}</strong>
             </p>
         </div>
-        <div className='navegacion'>
+        <div className={"navegacion " + "nav"+tema}>
             <button onClick={
                 onClickVolver
             }>Volver</button>

@@ -2,7 +2,7 @@ import React from "react";
 import EncabezadoFormulario from "./EncabezadoFormulario";
 
 
-function OrdenTrabajo({state,idActual}){
+function OrdenTrabajo({state,idActual,tema}){
 
     if (!state || !Array.isArray(state)) {
       return <div>Error: Invalid state data</div>;
@@ -12,8 +12,8 @@ function OrdenTrabajo({state,idActual}){
     data = data[0];
    
     return(
-      <div className='formulario'>
-        <EncabezadoFormulario titulo1={'Orden de trabajo N° '+ (data.id)} titulo2={''} />
+      <div className={"formulario "+"form"+tema}>
+        <EncabezadoFormulario titulo1={'Orden de trabajo N° '+ (data.id)} titulo2={''} tema={tema}/>
         <div>
           <h2>Datos del cliente</h2>
           <p>Nombre: {data.nombre}</p>

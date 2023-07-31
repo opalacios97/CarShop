@@ -13,27 +13,39 @@
 
 .navegacion {
   align-self: center;
-  background-color: rgb(239, 239, 238);
   max-width: 700px;
   text-align: center;
   padding: 20px;
   margin: 0 auto;
   margin-top: 20px;
-
   border-radius: 4px;
 
 
 }
 
+.navClaro{
+  background-color: rgb(239, 239, 238);
+}
+.navOscuro{
+  background-color: rgb(122, 122, 100);
+}
+
 .pantalla {
-  background-color: rgb(31, 160, 160);
   align-items: center;
   padding-top: 20px;
   padding-bottom: 30px;
 }
 
+.pantClaro{
+  background-color: rgb(31, 160, 160);
+}
+
+.pantOscuro{
+  background-color: rgb(48, 102, 102);
+}
+
 .formulario { 
-  background-color: rgb(239, 239, 238);
+  
   max-width: 700px;
   border-radius: 4px;
   margin: 0 auto;
@@ -44,12 +56,28 @@
   padding-left: 25px;
 }
 
+.formClaro{
+  background-color: rgb(239, 239, 238);
+}
+
+.formOscuro{
+  background-color: rgb(122, 122, 100);
+}
+
 .encabezado{
-  background-color: rgb(255, 255, 255);
   max-width: 700px;
   padding: 10px;
   text-align: center;
   border-radius: 4px;
+}
+
+
+.enClaro{
+  background-color: rgb(255, 255, 255) 
+}
+
+.enOscuro{
+  background-color: rgb(187, 174, 174) 
 }
 
 
