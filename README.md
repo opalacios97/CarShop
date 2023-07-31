@@ -22,30 +22,30 @@ Finalmente, para instalar las dependencias del proyecto debes ejecutar:
 
 #### `npm install`
 
-Una vez instaladas las dependencias, ya podrás empezar a trabajar con este proyecto de manera local.\
+Una vez instaladas las dependencias, ya podrás empezar a trabajar con este proyecto de manera local.
 
 
 ### Uso
 
 En el directorio del proyecto es posible ejecutar los siguentes comandos:
 
-Despliega la aplicación en modo desarrollo.\
-Puedes abrirla en tu navegador para visualizar, accede a [http://localhost:3000](http://localhost:3000).\
+Despliega la aplicación en modo desarrollo.
+Puedes abrirla en tu navegador para visualizar, accede a [http://localhost:3000](http://localhost:3000).
 
 #### `npm start`
 
-La página se actualizará al realizar cambios.\
+La página se actualizará al realizar cambios.
 
-Puedes iniciar la ejecución de prueba en el modo interactivo debes ejecutar el siguiente comando.\
+Puedes iniciar la ejecución de prueba en el modo interactivo debes ejecutar el siguiente comando.
 
 #### `npm test`
 
-La aplicación podrá ser desplegada, es posible realizando el build para producción en la carpeta `build` mediante la ejecución del siguiente comando.\
+La aplicación podrá ser desplegada, es posible realizando el build para producción en la carpeta `build` mediante la ejecución del siguiente comando.
 
 #### `npm run build`
 
 Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento
-La compilación se minimiza y los nombres de archivo incluyen los hashes.\
+La compilación se minimiza y los nombres de archivo incluyen los hashes.
 
 ## Despliegue:
 
