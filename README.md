@@ -19,15 +19,19 @@ La página se actualizará al realizar cambios.\
 
 Inicia una ejecución de prueba en el modo interactivo.\
 
-## Desarrollo:
 
 ### `npm run build`
 
 Realiza el build para producción en la carpeta `build`.\
-Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
-
+Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento
 La compilación se minimiza y los nombres de archivo incluyen los hashes.\
 La aplicación podrá ser desplegada
+
+## Despliegue:
+
+La aplicación será desplegada el servicio S3 de AWS.
+
+
 
 
 
