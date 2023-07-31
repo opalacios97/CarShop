@@ -7,7 +7,7 @@ import CampoText from "./CampoText";
 const listaCampos = ["nombre","email","teléfono","identificación"];
 const listaOpciones = ["Cédula","Ruc","Pasaporte"];
 
-function FormularioDatosCliente({onClickDatos}){
+function FormularioDatosCliente({onClickDatos,onClickVolver}){
     const [tipoID,setTipoID] = useState(null);
     const [text,setText] = useState("");
     const [text1,setText1] = useState("");
@@ -40,6 +40,9 @@ function FormularioDatosCliente({onClickDatos}){
             </p>
         </div>
         <div className='navegacion'>
+            <button onClick={
+                onClickVolver
+            }>Volver</button>
             <button onClick={()=>{
                 setText('');
                 setTipoID(null)

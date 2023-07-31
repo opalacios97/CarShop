@@ -6,7 +6,7 @@ import CampoRadio from "./CampoRadio";
 const listaCampos = ["marca","placa"];
 const listaOpciones = ["Lleno","Tres cuartos","Mitad", "Un cuarto"];
 
-function FormularioDatosVehiculo({onClickDatos}){
+function FormularioDatosVehiculo({onClickDatos,onClickVolver}){
     const [nivelFuel,setNivelFuel] = useState(null);
     const [text,setText] = useState("");
     const [text1,setText1] = useState("");
@@ -47,6 +47,9 @@ function FormularioDatosVehiculo({onClickDatos}){
           key={"daños"}/>
         </div>
         <div className='navegacion'>
+            <button onClick={
+                onClickVolver
+            }>Volver</button>
             <button onClick={()=>{
                 setText('');
                 setNivelFuel(null)

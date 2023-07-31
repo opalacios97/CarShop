@@ -15,7 +15,7 @@ const initialServices = [
 ];
 
 
-function FormularioServicios({onClickDatos}){   
+function FormularioServicios({onClickDatos,onClickVolver}){   
   
       const [services,dispatch] = useReducer(
         servicesReducer,
@@ -40,6 +40,9 @@ function FormularioServicios({onClickDatos}){
           <p><strong>Los servicios seleccionados son: </strong>{serviciosShowString}.</p>
           <p><strong>El tiempo estimado es: </strong>{tiempoShowString} horas.</p>
           <div className='navegacion'>
+          <button onClick={
+                onClickVolver
+          }>Volver</button>
           <button onClick={()=>{
                   onClickDatos(serviciosShowString,tiempoShowString);
           }}>Continuar</button>

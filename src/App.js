@@ -22,6 +22,10 @@ function App() {
   const [datos1, setDatos1] = useState({});
   const [datos2, setDatos2] = useState({});
 
+  function handleRetroceder(){
+    setContador(contador-1);
+  }
+
   function handleStart() {
     setContador(contador + 1);
     dispatch({ type: 'iniciar' });
@@ -93,20 +97,20 @@ function App() {
   }else if(contador === 1){
     return(
       <div className='pantalla'>
-        <FormularioDatosCliente onClickDatos={handleSendInfoCliente} />  
+        <FormularioDatosCliente onClickDatos={handleSendInfoCliente} onClickVolver={handleRetroceder}/>  
       </div>
     )
   }else if(contador === 2){
     return(
       <div className='pantalla'>
-        <FormularioDatosVehiculo onClickDatos={handleSendInfoVehiculo} />
+        <FormularioDatosVehiculo onClickDatos={handleSendInfoVehiculo} onClickVolver={handleRetroceder} />
       </div>
     )
   }else if(contador === 3){
 
     return(
       <div className='pantalla'>
-        <FormularioServicios onClickDatos={handleSendInfoServicios} />
+        <FormularioServicios onClickDatos={handleSendInfoServicios} onClickVolver={handleRetroceder} />
       </div>
     )
   }else if(contador === 4){
@@ -115,7 +119,8 @@ function App() {
       <div className='pantalla'>
         <GenerarOrden />
         <div className='navegacion'>
-          <button onClick={handleSendInfoAll}>Ver orden de trabajo</button>
+          <button onClick={handleRetroceder}>Volver</button>
+          <button onClick={handleSendInfoAll}>Ver orden de trabajo</button> 
         </div>
       </div>
     )
@@ -126,7 +131,8 @@ function App() {
         <OrdenTrabajo state={state} idActual={nextId}/>
         <p></p>
         <div className='navegacion'>
-          <button onClick={handleNew}>Confirmar</button>
+          <button onClick={handleRetroceder}>Volver</button>
+          <button onClick={handleNew}>Confirmar</button>         
         </div>
       </div>
     )
