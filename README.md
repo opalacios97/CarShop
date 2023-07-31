@@ -6,21 +6,32 @@ Este proyecto es un formulario de datos pensado para el proceso de recepción de
 
 ## Desarrollo:
 
+### `Instalación`
+
+#### `git clone https://github.com/opalacios97/weather.git`
+
+#### `cd weather`
+
+#### `npm install`
+
+
+### `Uso`
+
 En el directorio del proyecto es posible ejecutar los siguentes comandos:
 
-### `npm start`
+#### `npm start`
 
 Despliega la aplicación en modo desarrollo.\
 Abre [http://localhost:3000](http://localhost:3000) en tu navegador para visualizar.
 
 La página se actualizará al realizar cambios.\
 
-### `npm test`
+#### `npm test`
 
 Inicia una ejecución de prueba en el modo interactivo.\
 
 
-### `npm run build`
+#### `npm run build`
 
 Realiza el build para producción en la carpeta `build`.\
 Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento
