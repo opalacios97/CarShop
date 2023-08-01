@@ -12,11 +12,11 @@ Para poder hacer uso de este proyecto requieres instalarlo, puedes hacerlo desde
 
 En primer lugar debes clonar el proyecto, lo lograrás ejecutando el siguiente comando:
 
-#### `git clone https://github.com/opalacios97/weather.git`
+#### `git clone https://github.com/opalacios97/Carshop.git`
 
 A continuación debes acceder al directorio del proyecto, en esta ocasión el comando a ejecutar es el siguiente:
 
-#### `cd weather`
+#### `cd Carshop`
 
 Finalmente, para instalar las dependencias del proyecto debes ejecutar:
 
